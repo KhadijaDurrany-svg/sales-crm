@@ -1,0 +1,9 @@
+{
+  "package": "leadsift",
+  "version": "0.1.0",
+  "git_sha": "n/a",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+  "numpy": "2.5.4",
+  "dataset_checksum_sha256": "38ade9bca97ed14efd10cb8d39e2a249687bb20775cea970c401eb46590387e6"
+}

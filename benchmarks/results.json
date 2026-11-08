@@ -1,0 +1,112 @@
+{
+  "package": "leadsift",
+  "version": "0.1.0",
+  "config": {
+    "n_batches": 40,
+    "n_leads": 200,
+    "k": 20,
+    "n_base_records": 120,
+    "base_seed": 7,
+    "n_boot": 2000,
+    "n_perm": 10000
+  },
+  "dataset_checksum_sha256": "38ade9bca97ed14efd10cb8d39e2a249687bb20775cea970c401eb46590387e6",
+  "ranking": {
+    "k": 20,
+    "n_batches": 40,
+    "n_leads_per_batch": 200,
+    "relevance": "converted == True",
+    "methods": {
+      "fit_intent": {
+        "precision_at_k_mean": 0.6725,
+        "precision_at_k_ci95": [
+          0.64121875,
+          0.7037500000000001
+        ],
+        "ndcg_at_k_mean": 0.6987074424969845,
+        "ndcg_at_k_ci95": [
+          0.6648516884425418,
+          0.7327036829599268
+        ]
+      },
+      "raw_score": {
+        "precision_at_k_mean": 0.48625000000000007,
+        "precision_at_k_ci95": [
+          0.44746874999999997,
+          0.525
+        ],
+        "ndcg_at_k_mean": 0.49974513993452724,
+        "ndcg_at_k_ci95": [
+          0.4622258212390435,
+          0.537409270627665
+        ]
+      },
+      "recency": {
+        "precision_at_k_mean": 0.44375,
+        "precision_at_k_ci95": [
+          0.41000000000000003,
+          0.47750000000000004
+        ],
+        "ndcg_at_k_mean": 0.4568406279809684,
+        "ndcg_at_k_ci95": [
+          0.4159152474166388,
+          0.49610877306691614
+        ]
+      },
+      "random": {
+        "precision_at_k_mean": 0.3375,
+        "precision_at_k_ci95": [
+          0.31124999999999997,
+          0.36375
+        ],
+        "ndcg_at_k_mean": 0.3341164436009781,
+        "ndcg_at_k_ci95": [
+          0.30022568255524457,
+          0.3695483050380156
+        ]
+      }
+    },
+    "significance": {
+      "ndcg": {
+        "comparison": "fit_intent vs raw_score",
+        "delta_mean": 0.19896230256245723,
+        "p_value": 9.999000099990002e-05
+      },
+      "precision": {
+        "comparison": "fit_intent vs raw_score",
+        "delta_mean": 0.18624999999999992,
+        "p_value": 9.999000099990002e-05
+      }
+    }
+  },
+  "dedup": {
+    "n_batches": 40,
+    "n_base_records": 120,
+    "methods": {
+      "fuzzy": {
+        "precision_mean": 0.9499672577243023,
+        "recall_mean": 0.8225837306991238,
+        "f1_mean": 0.8805716496938801,
+        "f1_ci95": [
+          0.8687746037287943,
+          0.8925860810223805
+        ]
+      },
+      "exact_match": {
+        "precision_mean": 0.9886800972668184,
+        "recall_mean": 0.5990441266970767,
+        "f1_mean": 0.7436934281908638,
+        "f1_ci95": [
+          0.726031150452744,
+          0.7600108125690429
+        ]
+      }
+    },
+    "significance": {
+      "metric": "f1",
+      "comparison": "fuzzy vs exact_match",
+      "delta_mean": 0.13687822150301632,
+      "p_value": 9.999000099990002e-05
+    }
+  }
+}
